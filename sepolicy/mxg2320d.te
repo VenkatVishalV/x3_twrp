@@ -1,13 +1,13 @@
 # ==============================================
-# Policy File of /system/binmtk_6620_launcher Executable File 
+# Policy File of /system/bin/mxg2320d Executable File
 
 
 # ==============================================
 # Type Declaration
 # ==============================================
 
-type mtk_6620_launcher_exec , exec_type, file_type;
-type mtk_6620_launcher ,domain;
+type mxg2320d_exec , exec_type, file_type;
+type mxg2320d ,domain;
 
 # ==============================================
 # Android Policy Rule
@@ -21,9 +21,8 @@ type mtk_6620_launcher ,domain;
 # MTK Policy Rule
 # ==============================================
 
-allow mtk_6620_launcher wmt_prop:property_service set;
-allow mtk_6620_launcher init:unix_stream_socket connectto;
-allow mtk_6620_launcher property_socket:sock_file write;
-allow mtk_6620_launcher stpwmt_device:chr_file { read write ioctl open };
-allow mtk_6620_launcher devpts:chr_file { read write };
-init_daemon_domain(mtk_6620_launcher)
+#permissive msensord;
+init_daemon_domain(mxg2320d)
+#unconfined_domain(mxg2320d)
+allow mxg2320d msensor_device:chr_file rw_file_perms;
+allow mxg2320d gsensor_device:chr_file rw_file_perms;
