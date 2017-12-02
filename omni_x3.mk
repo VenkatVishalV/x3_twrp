@@ -1,4 +1,4 @@
-$(call inherit-product, device/letv/x3/device_x3.mk)
+$(call inherit-product, device/leeco/x3/device.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk) # If you are building for a phone
@@ -11,7 +11,7 @@ PRODUCT_RELEASE_NAME := x3
 
 PRODUCT_DEVICE := x3
 PRODUCT_NAME := omni_x3
-PRODUCT_BRAND := Letv
+PRODUCT_BRAND := Leeco
 PRODUCT_MODEL := Le 1S
 PRODUCT_MANUFACTURER := Letv
 PRODUCT_RESTRICT_VENDOR_FILES := false

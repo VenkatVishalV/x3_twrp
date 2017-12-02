@@ -3,9 +3,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 #$(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/letv/x3/overlay
+DEVICE_PACKAGE_OVERLAYS += device/leeco/x3/overlay
 
-LOCAL_PATH := device/letv/x3
+LOCAL_PATH := device/leeco/x3
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -39,7 +39,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 #$(shell rm -rf $(OUT)/recovery/root/init.rc)
 #$(shell mkdir -p $(OUT)/recovery/root/)
 #$(shell cp -r $(LOCAL_PATH/rootdir/*) $(OUT)/recovery/root/)
-#PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/letv/x3/rootdir,recovery/root)
+#PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/leeco/x3/rootdir,recovery/root)
 
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/rootdir/enableswap.sh:recovery/root/enableswap.sh \
