@@ -1,6 +1,6 @@
--include vendor/letv/x3/BoardConfigVendor.mk
+-include vendor/leeco/x3/BoardConfigVendor.mk
 
-LOCAL_PATH := device/letv/x3
+LOCAL_PATH := device/leeco/x3
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
@@ -16,7 +16,7 @@ TARGET_NO_FACTORYIMAGE := true
 TARGET_KMODULES := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := X500,X507,X509,X3
+TARGET_OTA_ASSERT_DEVICE := X500,X507,X509,X3,x500,x507,x509,x3
 
 # CPU
 TARGET_BOOTLOADER_BOARD_NAME := mt6795
@@ -44,7 +44,7 @@ TARGET_IS_64_BIT := true
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=disabled
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --base 0x40078000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --second_offset 0x00e88000 --tags_offset 0x0df88000 --board Bule
+BOARD_MKBOOTIMG_ARGS := --base 0x40078000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --second_offset 0x00e88000 --tags_offset 0x0df88000 --board Venkat
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
 TARGET_KERNEL_APPEND_DTB := true
 BOARD_CUSTOM_BOOTIMG := true
@@ -96,4 +96,4 @@ TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/battery/
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/custombootimg.mk
 
 #SELinux Policy File Configuration
-#BOARD_SEPOLICY_DIRS += device/letv/x3//sepolicy
+BOARD_SEPOLICY_DIRS += device/leeco/x3/sepolicy
