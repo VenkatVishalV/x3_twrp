@@ -1,4 +1,4 @@
-$(call inherit-product, device/leeco/x3/device_x3.mk)
+$(call inherit-product, device/leeco/x3/device.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk) # If you are building for a phone
